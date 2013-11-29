@@ -7,9 +7,9 @@
 
 
 	<view
-		android:layout_width="fill_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		class="com.shs.smart_unlock.DebugView"
-		android:id="@+id/view"
+		android:id="@+id/view1"
 		android:layout_gravity="left|center_vertical" />
 </LinearLayout>

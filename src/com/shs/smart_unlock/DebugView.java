@@ -2,6 +2,7 @@ package com.shs.smart_unlock;
 
 import android.graphics.Canvas;
 import android.content.Context;
+import android.util.AttributeSet;
 import android.widget.TextView;
 import android.hardware.Sensor;
 
@@ -14,13 +15,16 @@ import android.hardware.Sensor;
  */
 public class DebugView extends TextView {
 	MySensorRecorder Recorder;
-	public DebugView(Context context) {
-		super(context);
+	public DebugView(Context context, AttributeSet attrs) {
+		super(context, attrs);
 		Recorder = new MySensorRecorder(context.getSystemService(android.content.Context.SENSOR_SERVICE));
+		this.setText("Hello World123!");
 	}
 
 	@Override
 	protected void onDraw(Canvas canvas){
-		this.setText(Float.toString(Recorder.MotionMatrix[0][2]));
+		super.onDraw(canvas);
+		this.setText("Axis: "+Float.toString(Recorder.getDisplacement()[0]));
+		invalidate();
 	}
 }
