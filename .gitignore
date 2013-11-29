@@ -1,2 +1,8 @@
 .idea
 smart_unlock.iml
+out
+local.properties
+build.xml
+ant.properties
+gen
+

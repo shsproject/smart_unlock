@@ -14,8 +14,8 @@ public class MySensorRecorder implements SensorEventListener {
 	public long mSensorTimeStamp;
 	public long mCPUTimeStamp;
 	
-	public MySensorRecorder(SensorManager ActSensorManager) {
-		mSensorManager = ActSensorManager;
+	public MySensorRecorder(Object ActSensorManager) {
+		mSensorManager = (SensorManager) ActSensorManager;
 		mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 	}
 
